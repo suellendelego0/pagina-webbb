@@ -1,134 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Jovem Talento do Futebol</title>
-
+    <title>Estrela em Ascensão | Blog do Jogador</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body{
-            background:#f4f4f4;
-            color:#333;
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
         }
 
-        header{
-            background:#0b6623;
-            color:white;
-            text-align:center;
-            padding:30px;
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        nav{
-            background:#145a32;
-            text-align:center;
-            padding:15px;
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 15px;
-            font-weight:bold;
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
-        .container{
-            max-width:900px;
-            margin:30px auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.2);
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        img{
-            width:100%;
-            max-width:500px;
-            display:block;
-            margin:20px auto;
-            border-radius:10px;
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
         }
 
-        h2{
-            color:#0b6623;
-            margin-bottom:15px;
+        @media(min-width: 600px) {
+            .profile-card {
+                flex-direction: row;
+            }
         }
 
-        p{
-            margin-bottom:15px;
-            line-height:1.7;
-            text-align:justify;
+        .profile-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
         }
 
-        footer{
-            background:#0b6623;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:30px;
+        @media(min-width: 600px) {
+            .profile-img {
+                width: 40%;
+                max-height: none;
+            }
+        }
+
+        .profile-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .profile-info h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .stats-list {
+            list-style: none;
+        }
+
+        .stats-list li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .stats-list strong {
+            color: #2a5298;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .blog-post .date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .blog-post h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Blog do Jovem Craque</h1>
-    <p>Conheça a história de um talento de apenas 15 anos.</p>
-</header>
+    <header>
+        <h1>Diário de um Camisa 10</h1>
+        <p>A jornada rumo ao futebol profissional aos 15 anos</p>
+    </header>
 
-<nav>
-    <a href="#">Início</a>
-    <a href="#">Biografia</a>
-    <a href="#">Treinos</a>
-    <a href="#">Contato</a>
-</nav>
+    <div class="container">
+        
+        <!-- Cartão de Perfil do Jogador -->
+        <section class="profile-card">
+            <!-- Caso queira trocar a foto, mude o link no 'src' abaixo -->
+            <img class="profile-img" src="https://unsplash.com" alt="Jogador de Futebol">
+            <div class="profile-info">
+                <h2>Lucas Silva</h2>
+                <ul class="stats-list">
+                    <li><strong>Idade:</strong> 15 anos</li>
+                    <li><strong>Posição:</strong> Meia-Atacante / Ponta</li>
+                    <li><strong>Clube Atual:</strong> Categoria de Base (Sub-15)</li>
+                    <li><strong>Pé dominante:</strong> Canhoto</li>
+                </ul>
+            </div>
+        </section>
 
-<div class="container">
+        <!-- Postagem do Blog -->
+        <article class="blog-post">
+            <div class="date">Postado em 9 de Julho de 2026</div>
+            <h3>O início de um sonho: Assinei meu primeiro contrato de formação!</h3>
+            <p>Hoje foi um dos dias mais felizes da minha vida. Depois de muitos testes, treinos embaixo de chuva e viagens cansativas, assinei meu contrato de formação com a base do clube. Sei que o caminho até o profissional é longo e difícil, mas dar esse primeiro passo com apenas 15 anos me motiva a acordar cedo todos os dias e dar o meu melhor em campo.</p>
+            <p>Agradeço à minha família por todo o apoio e aos professores que acreditaram no meu futebol desde as escolinhas. O foco agora é total na preparação para o campeonato estadual Sub-15 que começa no próximo mês!</p>
+        </article>
 
-    <h2>Um Futuro Promissor</h2>
+    </div>
 
-    <img src="jogador.jpg" alt="Foto do jogador de futebol">
-
-    <p>
-        Aos 15 anos, este jovem jogador já demonstra muito talento dentro de campo.
-        Com dedicação, disciplina e paixão pelo futebol, ele vem chamando a atenção
-        em campeonatos escolares e torneios de base.
-    </p>
-
-    <p>
-        Seu principal objetivo é evoluir a cada treino, melhorar sua técnica e conquistar
-        uma oportunidade em um grande clube. A rotina inclui treinos físicos, trabalhos
-        com bola e acompanhamento escolar.
-    </p>
-
-    <p>
-        Além do futebol, ele acredita que a educação é fundamental para construir um
-        futuro sólido. Seu sonho é representar sua cidade, seu estado e, futuramente,
-        vestir a camisa da Seleção Brasileira.
-    </p>
-
-    <h2>Principais Características</h2>
-
-    <ul>
-        <li>⚽ Idade: 15 anos</li>
-        <li>🏃 Velocidade</li>
-        <li>🎯 Boa finalização</li>
-        <li>🤝 Espírito de equipe</li>
-        <li>💪 Disciplina nos treinos</li>
-    </ul>
-
-</div>
-
-<footer>
-    <p>© 2026 - Blog do Jovem Craque | Desenvolvido em HTML e CSS.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Diário de um Camisa 10. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
